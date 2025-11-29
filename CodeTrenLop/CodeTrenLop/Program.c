@@ -8,24 +8,33 @@ void kiemTraSoNguyen()
 
 void sapXepPhanTuMang()
 {
-	int integerarray[100];
-	int lenght;
-	printf("Nhap kich thuoc mang : ");
-	printf("\n");
-	scanf_s("%d", &lenght);
-	printf("Nhap du lieu cho mang %d phan tu\n : " , lenght);
-	//int length = sizeof(mangSoNguyen) / sizeof(int);
-	for (int i = 0; i < 0; lenght , i++);
+	void sapXepPhanTuMang(); 
 	{
-		printf("mang[%d] = " , i);
-		scanf_s("%d", &integerarray[i]);
-	}
-	printf(" sap xep tang dan du lieu mang %d phan tu\n",lenght );
-		for (int i = 0; i < 0; lenght - i ; i++);
+		int integerarray[4];
+		int leng = 4;
 
-	{
-		printf("mang[%d] = ", i);
-		scanf_s("%d", &integerarray[i]);
+		printf("Nhap 4 phan tu cua mang:\n");
+		for (int i = 0; i < leng; i++) {
+			printf("mang[%d] = ", i);
+			scanf_s("%d", &integerarray[i]); 
+		}
+
+		
+		for (int i = 0; i < leng - 1; i++) {
+			for (int j = i + 1; j < leng; j++) {
+				if (integerarray[i] > integerarray[j]) {
+					int temp = integerarray[i];
+					integerarray[i] = integerarray[j];
+					integerarray[j] = temp;
+				}
+			}
+		}
+
+		printf("\nMang sau khi sap xep tang dan:\n");
+		for (int i = 0; i < leng; i++) {
+			printf("%d ", integerarray[i]);
+		}
+		printf("\n");
 	}
 }
 
@@ -66,7 +75,7 @@ int main()
 		printf("\n");
 		printf("1. Kiem Tra So Nguyen");
 		printf("\n");
-		printf("2. TEN chuc nang 2");
+		printf("2. Sap xep phan tu mang");
 		printf("\n");
 		printf("3. TEN chuc nang 3");
 		printf("\n");
