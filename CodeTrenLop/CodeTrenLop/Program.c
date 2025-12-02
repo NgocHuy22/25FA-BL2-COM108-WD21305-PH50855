@@ -8,7 +8,7 @@ void kiemTraSoNguyen()
 
 void sapXepPhanTuMang()
 {
-	void sapXepPhanTuMang(); 
+	
 	{
 		int integerarray[4];
 		int leng = 4;
@@ -38,6 +38,29 @@ void sapXepPhanTuMang()
 	}
 }
 
+
+void demoMang2Chieu()
+{
+	int array[2][3];
+	for (int i = 0; i < 2; i++) 
+	{
+		for (int j = 0; j < 3; j++) 
+		{
+			printf("mang{%d][%d] = ", i, j);
+			scanf_s("%d", &array[i][j]);
+		}
+	}
+	for (int i = 0; i < 2; i++) 
+	{
+		for (int j = 0; j < 3; j++) 
+		{
+			printf("%d, ", array[i][j]);
+		}
+		printf("\n");
+	}
+
+
+}
 void lapChucNang(int chonChucNang)
 {
 	int tiepTuc = 1;
@@ -52,7 +75,7 @@ void lapChucNang(int chonChucNang)
 			sapXepPhanTuMang();
 			break;
 		case 3:
-			// ham goi chuc nang 3
+			demoMang2Chieu();	
 			break;
 		default:
 			printf("Chon sai. Chuc nang hop le [0-3]");
@@ -77,7 +100,7 @@ int main()
 		printf("\n");
 		printf("2. Sap xep phan tu mang");
 		printf("\n");
-		printf("3. TEN chuc nang 3");
+		printf("3. demo mang 2 chieu");
 		printf("\n");
 		printf("0. Thoat");
 		printf("\n");
