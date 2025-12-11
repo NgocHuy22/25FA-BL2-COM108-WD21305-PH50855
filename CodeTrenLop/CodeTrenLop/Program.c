@@ -1,122 +1,39 @@
 #include <stdio.h>
+#include <time.h>
+#include "thongTinThucung.h"
+#include "tinhTong.h"   
+#include "thongTinCuaHang.h"    
 
-void kiemTraSoNguyen()
-{
-	printf("Kiem Tra So Nguyen");
-	printf("\n");
+
+
+int main() {
+    int chon;
+    do {
+        printf("MENU\n");
+        printf("1. Thong tin thu cung\n");
+        printf("2. Tinh tong\n");
+        printf("3. Thong tin cua hang\n");
+        printf("0. Thoat\n");
+        printf("Moi chon: ");
+        scanf("%d", &chon);
+
+        switch (chon) {
+        case 1:
+            thongTinThuCung();
+            break;
+        case 2:
+            tinhTong();
+            break;
+        case 3:
+            thongTinCuaHang();
+            break;
+        case 0:
+            printf("Da thoat chuong trinh.\n");
+            break;
+        default:
+            printf("Lua chon khong hop le!\n");
+        }
+    } while (chon != 0);
+
+    return 0;
 }
-
-void sapXepPhanTuMang()
-{
-	
-	{
-		int integerarray[4];
-		int leng = 4;
-
-		printf("Nhap 4 phan tu cua mang:\n");
-		for (int i = 0; i < leng; i++) {
-			printf("mang[%d] = ", i);
-			scanf_s("%d", &integerarray[i]); 
-		}
-
-		
-		for (int i = 0; i < leng - 1; i++) {
-			for (int j = i + 1; j < leng; j++) {
-				if (integerarray[i] > integerarray[j]) {
-					int temp = integerarray[i];
-					integerarray[i] = integerarray[j];
-					integerarray[j] = temp;
-				}
-			}
-		}
-
-		printf("\nMang sau khi sap xep tang dan:\n");
-		for (int i = 0; i < leng; i++) {
-			printf("%d ", integerarray[i]);
-		}
-		printf("\n");
-	}
-}
-
-
-void demoMang2Chieu()
-{
-
-	//string - string.hs
-	char mangKyTu = 0; { 10; } = "HUY";
-	// scanf(" %c")
-	//puts(mangKyTu);
-	for (int i = 0; i < 3; i++) 
-	{
-		scanf_s(" %c", &mangKyTu);
-	}
-	// in ra (printf) (" %c")
-	gets_s(mangKyTu, 10);	
-	for (int i = 0; i < 10; i++) 
-	{
-		for (int j = 0; j < 3; j++) 
-		{
-			
-			scanf_s(" %c", mangKyTu);
-		}
-	}
-	for (int i = 0; i < 2; i++) 
-	{
-		for (int j = 0; j < 3; j++) 
-		{
-			
-		}
-		printf("\n");
-	}
-
-
-}
-void lapChucNang(int chonChucNang)
-{
-	int tiepTuc = 1;
-	while (tiepTuc == 1)
-	{
-		switch (chonChucNang)
-		{
-		case 1:
-			kiemTraSoNguyen();
-			break;
-		case 2:
-			sapXepPhanTuMang();
-			break;
-		case 3:
-			demoMang2Chieu();	
-			break;
-		default:
-			printf("Chon sai. Chuc nang hop le [0-3]");
-			break;
-		}
-
-		printf("Tiep tuc thuc hien chuc nang nay? [1=Co | 0=Khong]: ");
-		scanf_s("%d", &tiepTuc);
-		system("cls");
-	}
-
-}
-
-int main()
-{
-	int chonChucNang;
-	do
-	{
-		printf("Menu");
-		printf("\n");
-		printf("1. Kiem Tra So Nguyen");
-		printf("\n");
-		printf("2. Sap xep phan tu mang");
-		printf("\n");
-		printf("3. demo mang 2 chieu");
-		printf("\n");
-		printf("0. Thoat");
-		printf("\n");
-		printf("Hay chon chuc nang [0-3]: ");
-		scanf_s("%d", &chonChucNang);
-		lapChucNang(chonChucNang);
-	} while (chonChucNang != 0);
-}
-

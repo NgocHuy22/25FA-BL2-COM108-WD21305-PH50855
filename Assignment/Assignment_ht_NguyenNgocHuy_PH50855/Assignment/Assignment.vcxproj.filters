@@ -19,15 +19,4 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="thongTinThucung.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tinhTong.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="thongTinCuaHang.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
 </Project>
